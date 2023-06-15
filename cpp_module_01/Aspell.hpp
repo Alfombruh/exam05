@@ -7,6 +7,7 @@
 using std::string;
 using std::cout;
 
+
 class ASpell{
 	protected:
 		string name;
@@ -28,7 +29,7 @@ class ASpell{
 		const string &getEffects(void)const { return name; };
 
 		virtual ASpell  *clone(void) const = 0;
-		void launch(const ATarget &target){ target->getHitBySpell(*this); };
+		void launch(const ATarget &target)const{ target.getHitBySpell(*this); };
 };
 
 #endif

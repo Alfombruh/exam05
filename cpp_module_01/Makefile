@@ -3,7 +3,9 @@ CC = c++
 CFLAGS = -Werror -Wall -Wextra -fsanitize=address -g3
 FILES = main \
 		Warlock \
-		Aspell
+		ATarget \
+		Aspell	\
+		Fwoosh
 SRCS = $(addsuffix .cpp, $(FILES))
 OBJS = $(addsuffix .o, $(FILES))
 
