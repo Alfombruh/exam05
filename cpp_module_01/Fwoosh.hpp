@@ -21,9 +21,7 @@ class Fwoosh: public ASpell{
             name = "Fwoosh";
             effects = "fwooshed";
         };
-        ~Fwoosh(){
-            delete this; // just in case this objects was created by the clone method, has to check if this doesnt mess up the progam when its been created by default
-        };
+        ~Fwoosh(){};
 
         Fwoosh *clone()const {
             Fwoosh *copy = new Fwoosh;

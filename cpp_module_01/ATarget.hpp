@@ -10,7 +10,7 @@ using std::string;
 class ASpell;
 
 class ATarget{
-    private:
+    protected:
         string type;
 
         ATarget(const ATarget &r){ *this = r; };

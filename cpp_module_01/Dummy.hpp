@@ -4,9 +4,22 @@
 #include <iostream>
 #include "ATarget.hpp"
 
+using std::cout;
+using std::string;
+
 class Dummy: public ATarget{
+    private:
+        Dummy(const Dummy &r){ *this = r; };
+
+        Dummy &operator=(const Dummy &r){
+            type = r.type;
+            return *this;
+        }
+
     public:
-        Dummy(){};
+        Dummy(){
+            type = "Target Practice Dummy";
+        };
         ~Dummy(){};
 
         Dummy *clone(){

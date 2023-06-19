@@ -26,7 +26,7 @@ class ASpell{
 		virtual ~ASpell(void){};
 
 		const string &getName(void)const { return name; };
-		const string &getEffects(void)const { return name; };
+		const string &getEffects(void)const { return effects; };
 
 		virtual ASpell  *clone(void) const = 0;
 		void launch(const ATarget &target)const{ target.getHitBySpell(*this); };
