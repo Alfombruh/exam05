@@ -2,6 +2,7 @@
 #define WARLOCK_HPP
 
 #include <iostream>
+#include "Aspell.hpp"
 
 using std::cout;
 using std::string;
@@ -24,6 +25,9 @@ class Warlock {
 
 		void	setTitle(const string &title) { this->title = title; };
 		void	introduce(void) const { cout << name << ": I am " << name << ", " << title << "!\n"; };
+		void	learnSpell(ASpell *newSpell){};
+		void	forgetSpell(const string name){};
+		void	launchSpell(const string spellName, const ATarget &target){};
 };
 
 #endif

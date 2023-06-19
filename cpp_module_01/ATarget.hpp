@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+
 using std::cout;
 using std::string;
 
@@ -12,13 +13,13 @@ class ATarget{
     private:
         string type;
 
-        ATarget(){};
         ATarget(const ATarget &r){ *this = r; };
         ATarget &operator=(const ATarget &r){ 
             type = r.type;
             return *this;
         };
     public:
+        ATarget(){};
         ATarget(const string &type): type(type){};
         ~ATarget(){};
 
