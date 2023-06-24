@@ -13,7 +13,7 @@ class Polymorph: public ASpell{
 
         Polymorph &operator=(const Polymorph &r){
             name = r.name;
-            effects = r.effects; 
+            effects = r.effects;
             return *this;
         };
     public:

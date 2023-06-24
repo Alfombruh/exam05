@@ -23,8 +23,8 @@ class TargetGenerator
         TargetGenerator(){};
         ~TargetGenerator()
         {
-            // for (TargetsIT it = targets.begin(); it != targets.end(); it++)
-            //     delete &*it;
+            for (TargetsIT it = targets.begin(); it != targets.end(); it++)
+                delete &*it->second;
         };
         void learnTargetType(ATarget *target) { targets.insert(std::make_pair(target->getType(), target->clone())); };
         void forgetTargetType(string const &type) { targets.erase(targets.find(type)); };

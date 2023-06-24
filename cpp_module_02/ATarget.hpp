@@ -21,7 +21,7 @@ class ATarget{
     public:
         ATarget(){};
         ATarget(const string &type): type(type){};
-        ~ATarget(){};
+        virtual ~ATarget(){};
 
         void getHitBySpell(const ASpell &spell)const;
         const string getType()const{ return (type); };

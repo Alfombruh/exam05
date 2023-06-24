@@ -1,6 +1,6 @@
 NAME = Warlock
 CC = c++
-CFLAGS = -Werror -Wall -Wextra #-fsanitize=address -g3
+CFLAGS = -Werror -Wall -Wextra -ggdb3 -fsanitize=address
 FILES = main \
 		Warlock \
 		ATarget \
